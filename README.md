@@ -12,7 +12,7 @@
  > Este Projeto foi originalmente desenvolvido num ambiente Linux Kubuntu
 
  
-## --------------  Instalando o Docker e Docker-Compose no Linux: ------------------
+## -------------  Instalando o Docker e Docker-Compose no Linux:  ---------------
   Você precisa instalar o Docker antes de poder executar o projeto.
   Abra o terminal(Konsole) e digite os seguintes comandos:
  
@@ -38,7 +38,7 @@
 		$  docker ps -a													// Lista containers em execução e parados.
 		
 	
-## -------------  Baixando e utilizando os arquivos deste Repositório: --------------
+## -----------   Baixando e utilizando os arquivos deste Repositório:  ------------
  
 	1 - Instale o git:
 		$ sudo apt update
