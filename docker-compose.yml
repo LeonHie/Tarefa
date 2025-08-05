@@ -1,0 +1,24 @@
+services:
+
+  nginx:
+    build:
+      context:  .
+      dockerfile: ./docker/nginx/Dockerfile
+    volumes:
+      - ./src:/var/www/html
+    image: nginx:alpine
+    ports:
+      - "80:80" # Mapeia porta 80 para o Host
+    networks:
+      - internal
+
+  php:
+    image: php:fpm-alpine
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
