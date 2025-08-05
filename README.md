@@ -38,7 +38,7 @@
 		$  docker ps -a													// Lista containers em execução e parados.
 		
 	
-## -----------   Baixando e utilizando os arquivos deste Repositório:  ------------
+## -----------   Baixando e Utilizando os Arquivos deste Repositório:  ------------
  
 	1 - Instale o git:
 		$ sudo apt update
