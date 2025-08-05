@@ -15,7 +15,7 @@ services:
   php:
     image: php:fpm-alpine
     volumes:
-      - ./src:/var/www/html
+      - ./php:/var/www/html
     networks:
       - internal
 
