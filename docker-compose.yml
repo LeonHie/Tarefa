@@ -1,7 +1,7 @@
 services:
 
   mysql:
-    image: mysql
+    image: mysql:latest
     build:
       context: .
       dockerfile: ./docker/mysql/Dockerfile
