@@ -15,7 +15,7 @@ services:
       context:  .
       dockerfile: ./docker/nginx/Dockerfile
     volumes:
-      - ./src:/var/www/html
+      - ./php:/var/www/html
     image: nginx:alpine
     ports:
       - "80:80" # Mapeia porta 80 para o Host
