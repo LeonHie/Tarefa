@@ -23,9 +23,10 @@ services:
       - internal
 
   php:
-    image: php:fpm-alpine
+    image: php:fpm #fpm-alpine
     volumes:
       - ./php:/var/www/html
+      - ./php/ini/php.ini:/usr/local/etc/php/php.ini
     networks:
       - internal
 
