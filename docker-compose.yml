@@ -15,7 +15,7 @@ services:
       context:  .
       dockerfile: ./docker/nginx/Dockerfile
     volumes:
-      - ./php:/var/www/html
+      - ./src:/var/www/html
     image: nginx:alpine
     ports:
       - "80:80" # Mapeia porta 80 para o Host
@@ -24,10 +24,14 @@ services:
 
   php:
     image: php:fpm #fpm-alpine
+    build:
+      context: .
+      dockerfile: ./docker/phpfpm/Dockerfile
     volumes:
-      - ./php:/var/www/html
-      #- ./phpini/php.ini:/usr/local/etc/php/php.ini
-      - ./phpini/fpm.ini:/usr/local/etc/php/conf.d/custom-fpm.ini
+      - ./src:/var/www/html
+      #- ./docker/phpfpm/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/phpfpm/custom-fpm.ini:/usr/local/etc/php/conf.d/custom-fpm.ini
+      - ./docker/phpfpm/custom-mysqli.ini:/usr/local/etc/php/conf.d/custom-mysqli.ini
     networks:
       - internal
 
