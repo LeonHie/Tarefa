@@ -76,7 +76,7 @@
 	> Cria rede "internal" no modo bridge, usada para comunicação entre os containers.
 
 
- 	>	Para poder executar este projeto você precisa primeiro instalar os componentes do Docker.
+### Obs.:	Para poder executar este projeto você precisa primeiro instalar os componentes do Docker.
 
 ## Instalando o Docker e Docker-Compose no Linux:
  > - Este tutorial de instalação é para versões Debian, Ubuntu, e seus derivados.
