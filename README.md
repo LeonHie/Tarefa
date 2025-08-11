@@ -53,7 +53,7 @@
 ### - ./src
  - "index.php" -> Página php que mostrará o texto "Olá, mundo!" e a tabela das músicas consultadas no banco.
  - "info.php"   -> Pagina para consulta das configurações do servidor PHP.
- - Estes arquivos podem ser modificados que sua atualização se dará em tempo real..
+ - Estes arquivos podem ser modificados que sua atualização acontecerá em tempo real.
 
 ### - .
  - "docker-compose.yml" -> Arquivo utilizado pelo Docker Compose para configurar e iniciar os Containers.
