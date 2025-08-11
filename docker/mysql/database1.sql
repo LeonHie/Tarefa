@@ -1,12 +1,12 @@
 CREATE DATABASE Playlist;
 use Playlist;
 
-CREATE TABLE Musicos(
-    MusicosID int not null AUTO_INCREMENT,
-    Nome varchar(100) NOT NULL,
-    Sobrenome varchar(100)  NOT NULL,
-    PRIMARY KEY (MusicosID)
+CREATE TABLE Musicas(
+    MusicaID int not null AUTO_INCREMENT,
+    Musica varchar(100) NOT NULL,
+    Artista varchar(100)  NOT NULL,
+    PRIMARY KEY (MusicaID)
 );
 
-INSERT INTO Musicos(Nome, Sobrenome)
-VALUES  ("David", "Gilmour"), ("Larry", "Carlton"), ("Jimmi", "Hendrix"), ("Greg", "Howe"), ("Frank","Zappa");
+INSERT INTO Musicas(Musica, Artista)
+VALUES  ("No Way","David Gilmour"), ("RCM","Larry Carlton"), ("Bold as Love","Jimmi Hendrix"), ("Tempest Pulse","Greg Howe"), ("Nanook Rubs It","Frank Zappa"), ("Deep Blue Sea", "John Mayall"),("Breakdown", "Tom Petty"),("A Quitter Never Wins", "John Mayall"),("Good Vibrations","Ten Years After"),("Sledgehammer","Martin Miller");

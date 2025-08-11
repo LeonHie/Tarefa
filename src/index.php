@@ -7,7 +7,7 @@ $username = "root";
 $password = "senha123";
 $dbname = "Playlist";
 
-echo "Buscando últimas músicas tocadas... <br><br>";
+echo "Buscando as últimas músicas tocadas... <br><br>";
 // Create connection using MySQLi
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -17,16 +17,16 @@ if ($conn->connect_error) {
 }
 else{
     echo "Resultado:  <br>";
-    $sql = "Select * FROM Musicos";
+    $sql = "Select * FROM Musicas";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0){
         echo "<table border='1'>";
-        echo "<tr><th>Nome</th><th>Sobrenome</th></tr>";
+        echo "<tr><th>Música</th><th>Artista</th></tr>";
         while($row = $result->fetch_assoc()){
             echo "<tr>";
-            echo "<td>" . $row ["Nome"] . "</td>";
-            echo "<td>" . $row ["Sobrenome"] . "</td>";
+            echo "<td>" . $row ["Musica"] . "</td>";
+            echo "<td>" . $row ["Artista"] . "</td>";
             echo "</tr>";
         }
         echo "</table>";
