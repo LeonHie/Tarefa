@@ -11,12 +11,12 @@ services:
       - internal
 
   nginx:
+    image: nginx:alpine
     build:
       context:  .
       dockerfile: ./docker/nginx/Dockerfile
     volumes:
       - ./src:/var/www/html
-    image: nginx:alpine
     ports:
       - "80:80" # Mapeia porta 80 para o Host
     networks:
