@@ -2,7 +2,7 @@
     
     echo "Olá, mundo!! <br><br>"; 
 
-$servername = "10.0.0.51"; // Or your database host
+$servername = "tarefa-mysql-1"; // Or your database host
 $username = "root";
 $password = "senha123";
 $dbname = "Playlist";
