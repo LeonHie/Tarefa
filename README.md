@@ -1,6 +1,6 @@
 #  Sobre este Projeto: 
 
->  Este projeto sobe um ambiente Docker que disponibiliza, na porta 80, uma página "index.php" que retorna "Olá, mundo!" e uma lista de músicas que é consultada num banco de dados local. Utiliza o PHP-FPM como Servidor PHP e o Nginx como Proxy.
+###  Este projeto sobe um ambiente Docker que disponibiliza, na porta 80, uma página "index.php" que retorna "Olá, mundo!" e uma lista de músicas que é consultada num banco de dados local. Utiliza o PHP-FPM como Servidor PHP e o Nginx como Proxy.
  
  ### O ambiente utiliza três imagens docker:
 >
@@ -10,18 +10,14 @@
 
 	3 - mysql:latest		-	Banco de dados MySQL contendo a lista de músicas.
 
-  ### A Estrutura de arquivos é composta por:
+ ## A Estrutura de arquivos é composta por:
   
-  >
-  	1- Pastas com os arquivos de configuração de cada container contendo os seus respectivos "Dockerfile", e arquivos de configuração ".conf", ".ini", e ".sql". 
-
-  	2- A pasta "src" onde fica o "index.php".
-
-  	3- O arquivo "docker-compose.yml", utilizado para configurar e iniciar o ambiente.
-
-  	4- Este arquivo "README.md".
+ ###  	-  Pastas com os arquivos de configuração de cada container contendo os seus respectivos "Dockerfile", e arquivos de configuração ".conf", ".ini", e ".sql". 
+ ### 	- A pasta "src" aonde fica o "index.php".
+ ### 	- O arquivo "docker-compose.yml", utilizado para configurar e iniciar o ambiente.
+ ### 	- Este arquivo "README.md".
  
- ### Estrutura de Pastas:
+ ## Estrutura de Pastas:
 	├── docker
 	│   ├── mysql
 	│   │   ├── database1.sql
@@ -32,26 +28,32 @@
 	│   └── phpfpm
 	│       ├── custom-fpm.ini
 	│       ├── custom-mysqli.ini
-	│       ├── Dockerfile
-	│       └── php.ini
+	│       └── Dockerfile
 	├── docker-compose.yml
 	├── README.md
 	└── src
 	    ├── index.php
 	    └── info.php
 
-###	Descrição dos arquivos:
+##	Descrição dos arquivos:
 
--	"docker/mysql/database1.sql" ---> Script para criar o Banco "Playlist", a Tabela "Musicas", e as entradas da tabela.
--	"docker/mysql/Dockerfile" -------> Define a senha do banco e carrega o script "database1.sql" para dentro do container.
--
--	"docker/nginx/default.conf"	----> Arquivo de configurações do "root", nome do servidor", sequência da busca de arquivos, e parâmetros PHP.
--	"docker/nginx/Dockerfile" ------> Carrega "default.conf" para o container.
--
--	"docker/phpfpm/custom-fpm.ini" -----> Força ativação da extensão "mysqli" que será utilizada para acesso ao banco.
--	"docker/phpfpm/custom-mysqli.ini" --> Configura alguns parâmetros do mysqli.
--	"docker/phpfpm/Dockerfile" ---------> Solicita instalação dos componentes do mysqli durante a criação do container.
+### - mysql
+ -	"docker/mysql/database1.sql" ---> Script para criar o Banco "Playlist", a Tabela "Musicas", e as entradas da tabela.
+ -	"docker/mysql/Dockerfile" -------> Define a senha do banco e carrega o script "database1.sql" durante a criação do imagem MySQL.
 
+### - nginx
+ -	"docker/nginx/default.conf"	----> Configura local "root", nome do servidor", sequência da busca de arquivos, e parâmetros php.
+ -	"docker/nginx/Dockerfile" ------> Carrega "default.conf" durante a criação da imagem Ninx.
+
+### - phpfpm
+ -	"docker/phpfpm/custom-fpm.ini" -----> Força ativação da extensão "mysqli" que será utilizada para acesso ao banco.
+ -	"docker/phpfpm/custom-mysqli.ini" --> Configura alguns parâmetros do mysqli.
+ -	"docker/phpfpm/Dockerfile" ---------> Configura instalação dos componentes do mysqli durante a criação da imagem PHP-FPM.
+
+### - src
+ - "src/index.php" -> Página php que mostrará o texto "Olá, mundo!" e a tabela das músicas consultadas no banco.
+ - "src/info.php"   -> Pagina php para consulta das configurações do servidor PHP.
+ - Estes arquivos podem ser modificados que sua atualização se dará em tempo real..
 
 
 ### Para poder executar este projeto você precisa primeiro instalar os componentes do Docker.

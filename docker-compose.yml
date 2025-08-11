@@ -23,13 +23,12 @@ services:
       - internal
 
   php:
-    image: php:fpm #fpm-alpine
+    image: php:fpm
     build:
       context: .
       dockerfile: ./docker/phpfpm/Dockerfile
     volumes:
       - ./src:/var/www/html
-      #- ./docker/phpfpm/php.ini:/usr/local/etc/php/php.ini
       - ./docker/phpfpm/custom-fpm.ini:/usr/local/etc/php/conf.d/custom-fpm.ini
       - ./docker/phpfpm/custom-mysqli.ini:/usr/local/etc/php/conf.d/custom-mysqli.ini
     networks:
