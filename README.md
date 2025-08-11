@@ -55,7 +55,7 @@
  - "info.php"   -> Pagina para consulta das configurações do servidor PHP.
  - Estes arquivos podem ser modificados que sua atualização acontecerá em tempo real.
 
-### - .
+### - ./
  - "docker-compose.yml" -> Arquivo utilizado pelo Docker Compose para configurar e iniciar os Containers.
  - "README.md" -> Este arquivo que você está lendo!
 
