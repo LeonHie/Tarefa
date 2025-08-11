@@ -26,7 +26,8 @@ services:
     image: php:fpm #fpm-alpine
     volumes:
       - ./php:/var/www/html
-      - ./php/ini/php.ini:/usr/local/etc/php/php.ini
+      #- ./phpini/php.ini:/usr/local/etc/php/php.ini
+      - ./phpini/fpm.ini:/usr/local/etc/conf.d/custom.ini
     networks:
       - internal
 
